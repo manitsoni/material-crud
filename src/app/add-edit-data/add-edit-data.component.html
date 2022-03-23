@@ -1,0 +1,78 @@
+<div class="example-container">
+    <h2>{{formTitle}}</h2>
+    <div class="form-container">
+        <form [formGroup]="userForm">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>First name</mat-label>
+                <input matInput formControlName="Fname">
+                <mat-error *ngIf="userForm.controls.Fname.touched && userForm.controls.Fname.invalid">
+                    <span *ngIf="userForm.controls.Fname.errors">First name is required.</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Last name</mat-label>
+                <input matInput formControlName="Lname">
+                <mat-error *ngIf="userForm.controls.Lname.touched && userForm.controls.Lname.invalid">
+                    <span *ngIf="userForm.controls.Lname.errors">Last name is required.</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="Email">
+                <mat-error *ngIf="userForm.controls.Email.touched && userForm.controls.Email.invalid">
+                    <span *ngIf="userForm.controls.Email.errors?.required">Email is required.</span>
+                    <span *ngIf="userForm.controls.Email.errors?.email">Invalid email</span>
+                </mat-error>
+            </mat-form-field>
+            <label>Gender &nbsp;</label>
+            <mat-radio-group formControlName="Gender">
+                <mat-radio-button value="M">Male</mat-radio-button>
+                <mat-radio-button value="F">Female</mat-radio-button>
+                <mat-error *ngIf="userForm.controls.Gender.touched && userForm.controls.Gender.invalid">
+                    <span *ngIf="userForm.controls.Gender.errors?.required">Gender is required.</span>
+                </mat-error>
+                <br>
+            </mat-radio-group>
+            <br>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Country</mat-label>
+                <mat-select formControlName="Country">
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let country of countries" [value]="country.id">
+                        {{country.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="userForm.controls.Country.touched && userForm.controls.Country.invalid">
+                    <span *ngIf="userForm.controls.Country.errors">Country is required.</span>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="DOB" readonly>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" (click)="saveUser()">Save</button>&nbsp;
+            <button mat-raised-button color="warn" (click)="closeDialog()">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .mat-radio-button~.mat-radio-button {
+        margin-left: 16px;
+    }
+    
+    .example-radio-group {
+        display: flex;
+        flex-direction: row;
+        margin: 15px 15px;
+        align-items: flex-start;
+    }
+    
+    .example-radio-button {
+        margin: 5px;
+    }
+</style>

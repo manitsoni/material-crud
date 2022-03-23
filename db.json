@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": "15004821-f4fe-4f73-f226-94757e794424",
+      "fname": "manit",
+      "lname": "soni",
+      "gender": "M",
+      "email": "manitsoni369@gmail.com",
+      "country": {
+        "id": "3",
+        "name": "Dubai"
+      },
+      "dob": "2022-03-21T18:30:00.000Z"
+    },
+    {
+      "id": "3bc30318-30c9-ccaa-791a-969c349bc175",
+      "fname": "sbi",
+      "lname": "bank",
+      "gender": "M",
+      "email": "sbi@gmail.com",
+      "country": {
+        "id": "1",
+        "name": "India"
+      },
+      "dob": "2022-03-21T18:30:00.000Z"
+    },
+    {
+      "id": "79eac14e-bfd4-ee66-7701-3fd570a3dca2",
+      "fname": "fdsfdsf",
+      "lname": "sfdsfds",
+      "gender": "M",
+      "email": "fdsfds@fdsvbh.cdsicb",
+      "country": {
+        "id": "1",
+        "name": "India"
+      },
+      "dob": "2022-03-21T18:30:00.000Z"
+    },
+    {
+      "id": "eff19c71-6174-bdf2-84df-13aab3c839a5",
+      "fname": "HDFC",
+      "lname": "HDFC bank",
+      "gender": "M",
+      "email": "hdfc@gmail.com",
+      "country": {
+        "id": "2",
+        "name": "America"
+      },
+      "dob": "2022-03-22T18:30:00.000Z"
+    },
+    {
+      "id": "7fbde501-26d1-8b61-4f70-b2df8e5db855",
+      "fname": "icici",
+      "lname": "icici",
+      "gender": "F",
+      "email": "icici@gmail.com",
+      "country": {
+        "id": "1",
+        "name": "India"
+      },
+      "dob": "2022-02-28T18:30:00.000Z"
+    }
+  ]
+}

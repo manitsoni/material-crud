@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+}
+
+.addBtn {
+    background-color: #49c030;
+    color: aliceblue;
+    margin: 15px;
+    float: right;
+}
